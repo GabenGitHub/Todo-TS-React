@@ -1,38 +1,140 @@
-.App {
+body {
+  background-color: #333333;
+}
+h1 {
+  color: #F06C9B;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.todo {
+  margin: 0 auto;
+}
+
+.todo-text {
+  width: calc(100% - 320px);
+  display: inline-block;
+  background-color: #6F5E76;
   color: white;
+  font-size: 14px;
+  padding: 7px;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid gray;
 }
 
-.App-link {
-  color: #61dafb;
+.input-field {
+  background-color: #333333;
+  color: white;
+  width: calc(100% - 300px);
+  font-size: 14px;
+  padding: 7px;
+  margin: 5px;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+.input-field:invalid {
+  box-shadow: none;
+    -moz-box-shadow: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+hr{
+  width: 70%;
+  height:1px;
+  border-width:0;
+  background-color: #6F5E76;
+  color: #6F5E76;
+}
+
+hr:before{
+    display: block;
+    margin-left: -10%;
+    margin-top: -1px;
+    content:"";
+    background: -webkit-linear-gradient(linear, right top, left top, from(#6F5E76), to(#333333));
+    background: -o-linear-gradient(right, #6F5E76, #333333);
+    background: linear-gradient(to left, #6F5E76, #333333);
+    width: 10%;
+    height: 1px;
+}
+
+hr:after{
+  display: block;
+  margin-left: 100%;
+  margin-top: -1px;
+  content:"";
+  background: -webkit-linear-gradient(linear, left top, right top, from(#6F5E76), to(#333333));
+  background: -o-linear-gradient(left, #6F5E76, #333333);
+  background: linear-gradient(to right, #6F5E76, #333333);
+  width: 10%;
+  height: 1px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(207, 90, 131);
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 7px;
+  min-width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:before {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-left: 25px;
+}
+
+.button:hover span:before {
+  opacity: 1;
+  left: 0;
+}
+
+.button-remove {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #FF0066;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 7px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
 }
